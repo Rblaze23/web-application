@@ -19,6 +19,7 @@
         font-size: 20px;
         
 }
+
         input[type=submit]:hover {
   background-color:#eab76a;
   height: var(20px);
@@ -32,6 +33,10 @@
             
         }        
     h1{
+            color:white;
+            text-align: center;
+        }
+        h4{
             color:white;
             text-align: center;
         }
@@ -51,11 +56,11 @@
     <div>
     <form   name="theme_form"  method="POST" action="insertion_theme.php">
       
-    <h4>إسم المجال</h4><br>
-    <input type="text" name="theme"required><br>
-    <h4>تاريخ الاظافة</h4><br>
-    <input type="date"  name="date_add"required><br>
-    <input type="submit" value="تسجيل✅">
+    <h3>إسم المجال</h3>
+    <input type="text" name="theme" style="width: 200px;" required><br>
+    <h4>تاريخ الاظافة</h4>
+    <input type="date"  name="date_add" style="width: 200px;" required><br>
+    <br><input type="submit" value="تسجيل✅">
   </form>
   <a href="Menu.html"><input type="submit" value="رجوع⬅️"></a>
 </div>
