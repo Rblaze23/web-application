@@ -47,14 +47,15 @@
 <body>
 <h2>المركز الوطني للإعلامية </h2>
     <h3>وحدة التكوين و الرسكلة</h3>
+    <h1>اظافة قاعة</h1>
   <div>
   <form name="theme_form" action="insertion_salle.php" method="POST">
   
-  <h4>رقم القاعة</h4><br>
-    <input type="text" name="num"required><br>
-    <h4>مكان القاعة</h4><br>
-    <input type="text"  name="lieu"required><br>
-    <input type="submit" value="تسجيل✅">
+  <h3>رقم القاعة</h3>
+    <input type="text" name="num" style="width: 200px;" required><br>
+    <h3>مكان القاعة</h3>
+    <input type="text"  name="lieu" style="width: 200px;" required><br>
+    <br><input type="submit" value="تسجيل✅">
   </form>
   <a href="Menu.html"><input type="submit" value="رجوع⬅️"></a>
 </div>
