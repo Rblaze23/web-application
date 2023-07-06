@@ -107,8 +107,8 @@ div {
        <form action="resume.php" method="POST" enctype="multipart/form-data" target="_blank">
   <input type="file" name="resume"><br>
   <input type="submit" value="اضغط لإرسال سيرتك الذاتية"><br>
-  <a href="Menu.html"><input type="submit" value="رجوع⬅️"></a>
   </form>
+  <a href="Menu.html"><input type="submit" value="رجوع⬅️"></a>
 </div>
 
 </body>
