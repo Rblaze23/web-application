@@ -25,18 +25,41 @@
   </head>
 <body>
   <style>
-input[type=text], select {
-  width: 100%;
+    .container {
+  display: flex;
+  justify-content: space-between;
+}
+  .ee{
+    width: 49%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 10px;
   box-sizing: border-box;
   border-bottom: 2px solid #ffe5ad;
 }
+.er{
+  width: 98%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ffe5ad;
+}
+.ef{
+  width: 49%; 
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #ffe5ad;}
 input[type=submit] {
-        width: 100%;
+        width: 98%;
         background-color: #ffae42;
         color: white;
         padding: 5px ;
@@ -47,41 +70,48 @@ input[type=submit] {
         font-size: 20px;
         
 }
+
         input[type=submit]:hover {
   background-color:#eab76a;
   height: var(20px);
 }
 
 div {
-  border-radius: 10px;
+  border-radius: 4px;
   background-color: #f2f2f2;
   padding: 20px;
 }
+.send-resume {
+  text-align: right;
+}
 </style>
-<div>
+<div class="container">
 <form name="insertion" action="insertion_form.php" method="POST" enctype="multipart/form-data">
  
-     <input type="text" name="nom_prenom_a" style="width:500px"  placeholder="الإسم و اللقب" required> <input type="text" name="nom_prenom" style="width:1128px"  placeholder="Nom et Prenom" required>
+     <input type="text" name="nom_prenom_a" class="ee"  placeholder="الإسم و اللقب" required> <input type="text" name="nom_prenom" class="ef" placeholder="Nom et Prenom" required>
 
-      <input type="text" name="specialite_a" style="width:500px"  placeholder="الإختصاص" required> <input type="text" name="specialite" style="width:1128px" placeholder="specialite" required>
+      <input type="text" name="specialite_a" class="ee"  placeholder="الإختصاص" required> <input type="text" name="specialite" class="ef" placeholder="specialite" required>
  
-      <input type="text" name="direction_a"style="width:500px" placeholder="مكان التعيين" required> <input type="text" name="direction" style="width:1128px" placeholder="direction" required>
+      <input type="text" name="direction_a" class="ee" placeholder="مكان التعيين" required> <input type="text" name="direction" class="ef" placeholder="direction" required>
 
-      <input type="text" name="entreprise_a" style="width:500px" placeholder="المؤسسة" required> <input type="text" name="entreprise" style="width:1128px" placeholder="entreprise" required>
+      <input type="text" name="entreprise_a" class="ee" placeholder="المؤسسة" required> <input type="text" name="entreprise" class="ef" placeholder="entreprise" required>
       <h4>رقم الحساب البنكي (RIB)</h4>
-      <input type="text" name="rib" placeholder="RIB" required>
+      <input type="text" name="rib" class="er" placeholder="RIB" required>
         <br>
        <h3>الراجاء التثبت من معلوماتك قبل ضغط زر تسجيل🤗</h3>
       <h3>🤗 Veuillez vérifier vos informations avant d'appuyer sur le bouton d'enregistrement</h3>    
        <input type="submit" value="تسجيل✅">
-      
 </form>
-<h4>أرسل سيرتك الذاتية</h4>
-<form action="resume.php" method="POST" enctype="multipart/form-data" target="_blank">
-  <input type="file" name="resume">
-  <input type="submit" value="سيرتك الذاتية">
-</form>
-<a href="Menu.html"><input type="submit" value="رجوع⬅️"></a>
 </div>
+</form>
+<div class="send-resume">
+<h2>أرسل سيرتك الذاتية</h2>
+       <form action="resume.php" method="POST" enctype="multipart/form-data" target="_blank">
+  <input type="file" name="resume"><br>
+  <input type="submit" value="اضغط لإرسال سيرتك الذاتية"><br>
+  <a href="Menu.html"><input type="submit" value="رجوع⬅️"></a>
+  </form>
+</div>
+
 </body>
 </html>
