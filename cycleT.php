@@ -128,7 +128,7 @@ select{
     <h3>وحدة التكوين و الرسكلة</h3>
     <h1>قائمة الدورة التكوينية</h1>
     <div>
-    <form method="POST" action="" style:text-align="center">
+    <form method="POST" action="importcyc.php" style:text-align="center">
         <input type="text" name="theme" placeholder="الدورة التكوينية">
         <select name="num_salle">
           <option>رقم القاعة</option>
@@ -149,8 +149,7 @@ select{
         ?>
         </select>
         <p>تاريخ البداية <input type="date" name="date_deb" placeholder="تاريخ البداية"></p>
-        
-        <input type="submit" name="search" value="بحث 🔍">
+        <input type="submit" name="import" value="تنزيل"></a>
     </form>
     <table>
         
@@ -179,7 +178,7 @@ select{
         </tr>
         <?php endforeach; ?>
     </table><br>
-    <a href="importcyc.php"><input type="submit" name="import" value="تنزيل"></a>
+
     <a href="List.html"><input type="submit" value="رجوع⬅️"></a>
     </div>
 </body>
