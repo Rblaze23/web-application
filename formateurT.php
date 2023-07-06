@@ -26,11 +26,21 @@ if (isset($_POST['search'])) {
     $direction = $_POST['direction'];
     $specialite = $_POST['specialite'];
     $nom_prenom = $_POST['nom_prenom'];
+    $query = "SELECT * FROM formateur WHERE  entreprise_a COLLATE utf8mb4_general_ci = :entreprise_a OR direction_a COLLATE utf8mb4_general_ci = :direction_a OR specialite_a COLLATE utf8mb4_general_ci	 = :specialite_a OR nom_prenom_a COLLATE utf8mb4_general_ci	 = :nom_prenom_a OR entreprise COLLATE utf8_general_ci = :entreprise OR direction COLLATE utf8_general_ci = :direction OR specialite COLLATE utf8_general_ci = :specialite OR nom_prenom COLLATE utf8_general_ci = :nom_prenom";
 
-    $query = "SELECT * FROM formateur WHERE  entreprise_a= :entreprise_a OR direction_a = :direction_a OR specialite_a = :specialite_a OR nom_prenom_a = :nom_prenom_a or entreprise= :entreprise OR direction = :direction OR specialite = :specialite OR nom_prenom = :nom_prenom";
     $stmt = $pdo->prepare($query);
-    $stmt->execute([ 'entreprise_a'=> $entreprise_a,'direction_a' => $direction_a, 'specialite_a' => $specialite_a, 'nom_prenom_a' => $nom_prenom_a,'entreprise'=> $entreprise,'direction' => $direction, 'specialite' => $specialite, 'nom_prenom' => $nom_prenom]);
+    $stmt->execute([
+        'entreprise_a' => $entreprise_a,
+        'direction_a' => $direction_a,
+        'specialite_a' => $specialite_a,
+        'nom_prenom_a' => $nom_prenom_a,
+        'entreprise' => $entreprise,
+        'direction' => $direction,
+        'specialite' => $specialite,
+        'nom_prenom' => $nom_prenom
+    ]);
     $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    
 }
 
 
@@ -115,7 +125,7 @@ h3{
     <h3>وحدة التكوين و الرسكلة</h3>
 <h1> قائمة المكونين</h1>
 <div>
-<form method="POST" action="" style:text-align="center">
+<form method="POST" action="importfor.php" style:text-align="center">
         <input type="text" name="nom_prenom_a" placeholder="الإسم واللقب">
         <input type="text" name="specialite_a" placeholder=" الإختصاص">
         <input type="text" name="direction_a" placeholder=" مكان التعيين">
@@ -124,8 +134,7 @@ h3{
         <input type="text" name="specialite" placeholder="specialite">
         <input type="text" name="direction" placeholder="direction ">
         <input type="text" name="entreprise" placeholder="entreprise ">
-        
-        <input type="submit" name="search" value="بحث 🔍">
+        <input type="submit" name="import" value="تنزيل">
     </form>
     <table>
         <tr class="header-row">
@@ -155,9 +164,6 @@ h3{
         </tr>
         <?php endforeach; ?>
     </table>
-    <form method="POST" action="importfor.php">
-        <input type="submit" name="import" value="تنزيل">
-    </form>
     
     <a href="List.html"><input type="submit" value="رجوع⬅️"></a>
 </div>
