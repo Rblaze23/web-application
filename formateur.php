@@ -21,11 +21,7 @@
       body { 
         background-color:#131516 ;
             }
-      </style>
-  </head>
-<body>
-  <style>
-    .container {
+            .container {
   display: flex;
   justify-content: space-between;
 }
@@ -84,7 +80,9 @@ div {
 .send-resume {
   text-align: right;
 }
-</style>
+      </style>
+  </head>
+<body>
 <div class="container">
 <form name="insertion" action="insertion_form.php" method="POST" enctype="multipart/form-data">
  
