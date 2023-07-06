@@ -2,8 +2,8 @@
  <head>
   <meta charset="UTF-8">
   <style>
-    input[type=text], select {
-      width: 100%;
+    input[type=text]{
+      width:542px;
       padding: 12px 20px;
       margin: 8px 0;
       display: inline-block;
@@ -12,9 +12,18 @@
       box-sizing: border-box;
       border-bottom: 2px solid #ffe5ad;
     }
-
-    input[type=email], select {
-      width: 100%;
+    input[type=email]{
+      width:542px;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      border-bottom: 2px solid #ffe0ad;
+    }
+     select {
+      width: 99%;
       padding: 12px 20px;
       margin: 8px 0;
       display: inline-block;
@@ -24,7 +33,7 @@
       border-bottom: 2px solid #ffe5ad;
     }
     input[type=submit] {
-        width: 100%;
+        width: 99%;
         background-color: #ffae42;
         color: white;
         padding: 5px ;
@@ -53,6 +62,7 @@
         body { 
         background-color:#131516 ;
             }
+  
     </style>
   </head>
   <body>
@@ -63,11 +73,11 @@
       <h2>المركز الوطني للإعلامية </h2>
     <h3>وحدة التكوين و الرسكلة</h3><br>
     <h1>المشارك</h1><br>
-        <input type="text" name="cin" placeholder="رقم بطاقة التعريف الوطنية "  required>
-        <input type="text" name="nom_prenom" placeholder="الإسم واللقب" style="width:500px" required> <input type="text" name="nom_prenom_f" placeholder="Nom Prenom" style="width:1128px" required>
-        <input type="text" name="entreprise" placeholder=" شركة"  style="width:500px" required> <input type="text" name="entreprise_f" placeholder="Entreprise"  style="width:1128px" required>
-        <input type="text" name="tel_fix" placeholder="هاتف المنزل"style="width:500px" required> <input type="text" name="tel_port" placeholder="هاتف محمول" style="width:1128px" required>
-        <input type="text" name="fax" placeholder="فاكس"style="width:500px" > <input type="email" name="mail" placeholder="بريد إلكتروني" style="width:1128px" required>
+        <input type="text" name="cin" placeholder="رقم بطاقة التعريف الوطنية (CIN)"  required>
+        <input type="text" name="nom_prenom" placeholder="الإسم واللقب" required> <input type="text" name="nom_prenom_f" placeholder="Nom Prenom"  required>
+        <input type="text" name="tel_fix" placeholder="هاتف المنزل" required> <input type="text" name="entreprise" placeholder=" شركة"  required> 
+        <input type="text" name="entreprise_f" placeholder="Entreprise"   required> <input type="text" name="tel_port" placeholder="هاتف محمول"  required>
+        <input type="text" name="fax" placeholder="فاكس" > <input type="email"  name="mail" placeholder="بريد إلكتروني (email)" required>
         
         <select name="theme_part" required>
           <option></option>
